@@ -11,37 +11,25 @@ STATIC_ROOT = os.path.join(BASE_DIR, "static")
 
 # FOR PRODUCTION:
 # ------------------------------------------------#
-# IS_HEROKU = "DYNO" in os.environ
-# if IS_HEROKU:
-#     ALLOWED_HOSTS = ['*']
-# else:
-#     ALLOWED_HOSTS = []
+IS_HEROKU = "DYNO" in os.environ
+if IS_HEROKU:
+    ALLOWED_HOSTS = ['*']
+else:
+    ALLOWED_HOSTS = []
 
-# SECURE_SSL_REDIRECT = True
-# SESSION_COOKIE_SECURE = True
-# CSRF_COOKIE_SECURE = True
+SECURE_SSL_REDIRECT = True
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = True
 
-# DEBUG = False
+DEBUG = False
 
-# # DATABASES = {
-# #     'default': dj_database_url.config(
-# #         default='sqlite:///' + os.path.join(BASE_DIR, 'db.sqlite3')
-# #     )
-# # }
 # ------------------------------------------------#
 
 # FOR DEVELOPMENT:
 # ------------------------------------------------#
-DEBUG = True
-ALLOWED_HOSTS = []
+# DEBUG = True
+# ALLOWED_HOSTS = []
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': 'mysite.db',
-#         # 'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
 # ------------------------------------------------#
 
 # Application definition
